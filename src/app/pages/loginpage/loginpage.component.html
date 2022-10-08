@@ -1,0 +1,29 @@
+<div class="login">
+  <app-header></app-header>
+  <div class="center">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+      <div class="txt_field">
+        <input
+          type="text"
+          name="userName"
+          formControlName="userName"
+          required
+        />
+        <span></span>
+        <label>Username</label>
+      </div>
+      <div class="txt_field">
+        <input
+          type="password"
+          name="password"
+          formControlName="password"
+          required
+        />
+        <span></span>
+        <label>Password</label>
+      </div>
+      <input type="submit" value="Login" /><br /><br />
+    </form>
+  </div>
+</div>

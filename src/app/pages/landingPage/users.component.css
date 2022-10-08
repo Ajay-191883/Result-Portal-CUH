@@ -1,0 +1,88 @@
+.front-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #141414;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  cursor: pointer;
+  color: grey;
+  font-size: 1.75vw;
+  margin: 0.5em 0;
+  padding: 2px;
+  margin-left: 30px;
+  font-weight: 400;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.admin img {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #3dbc93;
+  margin-bottom: -40px;
+  height: 200px;
+  width: 150px;
+  padding-left: 5px;
+}
+
+.r_s img {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #e9573e;
+  height: 200px;
+  margin-bottom: -40px;
+  width: 150px;
+  padding-left: 5px;
+}
+
+.hod img {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #9f82bb;
+  margin-bottom: -40px;
+  height: 200px;
+  width: 150px;
+  padding-left: 5px;
+}
+
+.student img {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #ffc200;
+  margin-bottom: -40px;
+  height: 200px;
+  width: 150px;
+  padding-left: 5px;
+}
+
+.login .images:hover {
+  border: 4px solid #f4c8cd;
+}
+
+.front-page .login .admin,
+.front-page .login .r_s,
+.front-page .login .hod,
+.front-page .login .student {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 50px;
+  height: 120px;
+  width: 120px;
+  font-size: 20px;
+  margin-top: 130px;
+}
+
+.front-page .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+}

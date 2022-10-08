@@ -1,0 +1,36 @@
+<div class="sidebar">
+  <div class="profile_container">
+    <img src="../../assets/CUH.png" alt="logo" />
+    <h1>{{ userRole | uppercase }}</h1>
+  </div>
+
+  <div class="link_container">
+    <a routerLink="/features/{{ userRole }}/dashboard">
+      <i class="fa fa-address-book" aria-hidden="true"></i>
+      <h3>Dashboard</h3>
+    </a>
+
+    <a
+      *ngIf="!(userRole == 'student')"
+      routerLink="/features/{{ userRole }}/internalData"
+    >
+      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+      <h3>Internal Awards</h3>
+    </a>
+    <a
+      *ngIf="!(userRole == 'student')"
+      routerLink="/features/{{ userRole }}/uploadData"
+    >
+      <i class="fa fa-inbox" aria-hidden="true"></i>
+      <h3>Data Upload</h3>
+    </a>
+    <a
+      *ngIf="!(userRole == 'student')"
+      routerLink="/features/{{ userRole }}/endTermData"
+    >
+      <i class="fa fa-retweet" aria-hidden="true"></i>
+      <h3>End Term Exam</h3>
+    </a>
+    <button class="btn btn-info" routerLink="/">Log Out</button>
+  </div>
+</div>

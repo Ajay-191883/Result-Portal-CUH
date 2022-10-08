@@ -1,0 +1,15 @@
+.main_content {
+  float: right;
+  width: 75%;
+}
+h2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.main_content .intro h2 {
+  text-align: right;
+  padding-right: 50px;
+}

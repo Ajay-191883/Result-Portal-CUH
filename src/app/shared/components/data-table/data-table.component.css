@@ -1,0 +1,49 @@
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  width: 15%;
+}
+
+.table-container {
+  padding-top: 20px;
+  width: 95%;
+}
+
+td.id,
+th.id {
+  width: 10% !important;
+}
+
+td.dept,
+th.dept {
+  width: 30% !important;
+}
+
+i.actions {
+  margin-right: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+td.status,
+th.status {
+  font-weight: 600;
+}
+
+td.approve {
+  color: green;
+}
+td.decline {
+  color: red;
+}
+td.pending {
+  color: rgb(0, 20, 150);
+}

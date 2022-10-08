@@ -1,0 +1,25 @@
+.header-start {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+img {
+  height: 200px;
+}
+
+.header-start h1 {
+  font-size: 48px;
+  color: white;
+  text-shadow: 2px 2px 2px #34495eb2;
+}
+
+.back {
+  width: 150px;
+}
+
+.back h2 {
+  font-size: 36px;
+  color: #ce7675;
+  cursor: pointer;
+}
