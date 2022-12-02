@@ -2,18 +2,11 @@
   float: right;
   width: 75%;
 }
-
-.main_content .intro {
-  padding-right: 50px;
-}
 h2 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
   padding-top: 50px;
   text-align: center;
-}
-.main_content .intro h2 {
-  text-align: right;
 }
 
 .data {

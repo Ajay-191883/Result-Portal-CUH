@@ -83,12 +83,6 @@ export class DataTableComponent implements AfterViewInit {
 
 /** Builds and returns a new User. */
 function createNewUser(id: number): UserData {
-  // const name =
-  //   NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
-  //   ' ' +
-  //   NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
-  //   '.';
-
   return {
     id: id.toString(),
     department:

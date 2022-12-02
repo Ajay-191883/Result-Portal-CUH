@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,14 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  isBaseUrl: boolean = true;
+  isBaseUrl: boolean = false;
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.isBaseUrl = this.route.snapshot.url.length > 0;
-    console.log(this.route.snapshot.url);
+    this.route.snapshot.url.forEach((ss) => {
+      if (ss.path.includes('login')) {
+        this.isBaseUrl = true;
+      }
+    });
   }
 }

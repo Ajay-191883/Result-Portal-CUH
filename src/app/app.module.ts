@@ -20,6 +20,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { RDComponent } from './features/r-d/r-d.component';
 import { FeaturesComponent } from './features/features.component';
 import { DashboardComponent } from './features/r-d/components/dashboard/dashboard.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { DashboardComponent } from './features/r-d/components/dashboard/dashboar
     DataTableComponent,
     LoaderComponent,
     HeaderComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,

@@ -8,9 +8,11 @@ import { HelperService } from 'src/app/shared/services/helper.service';
   styleUrls: ['./dataupload.component.css'],
 })
 export class DatauploadComponent implements OnInit {
-  userRole: string = ''
-  constructor(private helperService: HelperService,
-    private route: ActivatedRoute) {}
+  userRole: string = '';
+  constructor(
+    private helperService: HelperService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe((p) => {

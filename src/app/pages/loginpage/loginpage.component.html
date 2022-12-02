@@ -1,17 +1,21 @@
+<app-loader *ngIf="loading"></app-loader>
 <div class="login">
   <app-header></app-header>
   <div class="center">
     <h1>Login</h1>
     <form [formGroup]="loginForm" (ngSubmit)="login()">
       <div class="txt_field">
-        <input
-          type="text"
-          name="userName"
-          formControlName="userName"
-          required
-        />
+        <input type="text" name="email" formControlName="email" required />
         <span></span>
-        <label>Username</label>
+        <label>Email</label>
+      </div>
+      <div
+        *ngIf="
+          !loginForm.get('email')?.pristine && loginForm.get('email')?.errors
+        "
+        class="errMsg"
+      >
+        Valid Email is required...
       </div>
       <div class="txt_field">
         <input
@@ -23,7 +27,17 @@
         <span></span>
         <label>Password</label>
       </div>
-      <input type="submit" value="Login" /><br /><br />
+      <div
+        *ngIf="
+          !loginForm.get('password')?.pristine &&
+          loginForm.get('password')?.errors
+        "
+        class="errMsg"
+      >
+        Valid Password is required...
+      </div>
+      <button type="submit" [disabled]="loginForm.invalid">Login</button
+      ><br /><br />
     </form>
   </div>
 </div>

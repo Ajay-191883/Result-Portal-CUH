@@ -9,38 +9,42 @@ import { SidebarComponent } from './shared/components/sidebar/sidebar.component'
 import { TermendComponent } from './features/r-d/components/termend/termend.component';
 import { UsersComponent } from './pages/landingPage/users.component';
 import { DashboardComponent } from './features/r-d/components/dashboard/dashboard.component';
+import { AuthGuardService } from './shared/services/auth-guard.service';
+import { CanDeactivateGuard } from './shared/services/can-deactivate-guard.service';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
-  { path: 'login/:userRole', component: LoginpageComponent },
   {
-    path: 'features',
+    path: 'login/:userRole',
+    component: LoginpageComponent,
+  },
+  {
+    path: 'features/:userRole',
     children: [
       {
-        path: ':userRole/dashboard',
+        path: 'dashboard',
         component: DashboardComponent,
       },
       {
-        path: ':userRole/uploadData',
+        path: 'uploadData',
         component: DatauploadComponent,
       },
       {
-        path: ':userRole/endTermData',
+        path: 'endTermData',
         component: TermendComponent,
       },
       {
-        path: ':userRole/internalData',
+        path: 'internalData',
         component: InternalComponent,
       },
     ],
+    canActivate: [AuthGuardService],
+    // canDeactivate: [CanDeactivateGuard],
   },
   { path: 'sidebar', component: SidebarComponent },
-  // { path: 'uploadData', component: DatauploadComponent },
-  // { path: 'endTermData', component: TermendComponent },
-  // { path: 'internalData', component: InternalComponent },
-  // { path: 'dashboard', component: DashboardComponent },
   { path: 'dataTable', component: DataTableComponent },
   { path: 'loader', component: LoaderComponent },
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({

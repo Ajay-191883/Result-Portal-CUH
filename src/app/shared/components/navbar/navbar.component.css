@@ -1,0 +1,15 @@
+.intro {
+  text-align: right;
+  padding: 20px 0;
+}
+.intro h2 {
+  font-weight: 600;
+  font-size: x-large;
+  margin-top: 10px;
+  margin-right: 20px;
+}
+
+.intro h2 #userName {
+  display: inline-block;
+  color: #4f66ac;
+}

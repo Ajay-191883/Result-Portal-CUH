@@ -20,7 +20,6 @@ export class LoaderComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     console.log(this.loadingDiv);
     this.helperService.isLoading.subscribe((res) => {
-      console.log(res);
       if (!res) {
         this.loadingDiv.nativeElement.style.display = 'none';
       }

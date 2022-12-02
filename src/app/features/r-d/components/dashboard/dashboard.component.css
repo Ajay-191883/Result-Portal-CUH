@@ -2,16 +2,7 @@
   float: right;
   width: 75%;
 }
-.main_content .intro {
-  text-align: right;
-  padding: 20px 0;
-}
-.main_content .intro h2 {
-  font-weight: 600;
-  font-size: xx-large;
-  margin-top: 10px;
-  margin-right: 20px;
-}
+
 .box_container {
   display: flex;
   justify-content: space-evenly;
@@ -95,9 +86,6 @@ li {
   font-weight: 600;
   margin: 18px;
 }
-.box_3 button {
-  margin: 10px;
-}
 .box_3 .container {
   display: flex;
   flex-direction: column;
@@ -105,68 +93,6 @@ li {
   align-items: center;
   height: 100%;
   width: 100%;
-}
-
-table {
-  margin-top: 10px;
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-  font-size: large;
-  font-weight: 300;
-  table-layout: fixed;
-}
-
-td,
-th {
-  border: 1px solid #dddddd;
-  text-align: center;
-  padding: 8px;
-}
-
-td.dept,
-th.dept,
-td.stat,
-td.sem,
-th.stat,
-th.sem {
-  width: 30%;
-}
-td.act,
-th.act {
-  width: 30%;
-}
-tr:nth-child(odd) {
-  background-color: #dddddd;
-}
-
-.box_3 .process {
-  color: rgb(0, 139, 0);
-}
-.denied {
-  color: red;
-}
-.box_3 i {
-  cursor: pointer;
-}
-.fa-paper-plane {
-  border: 1px solid black;
-  border-radius: 50%;
-  padding: 4px;
-  font-size: large;
-}
-
-.fa-times {
-  border: 1px solid black;
-  border-radius: 50%;
-  padding: 4px;
-  font-size: large;
-  margin-left: 10px;
-}
-
-.fa-eye {
-  font-size: x-large;
-  margin-left: 10px;
 }
 
 :host ::ng-deep .table-container {
