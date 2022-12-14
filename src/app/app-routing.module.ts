@@ -1,16 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DataTableComponent } from './shared/components/data-table/data-table.component';
-import { DatauploadComponent } from './features/r-d/components/dataupload/dataupload.component';
-import { InternalComponent } from './features/r-d/components/internal/internal.component';
+import { DatauploadComponent } from './features/dataupload/dataupload.component';
+import { InternalComponent } from './features/internal/internal.component';
 import { LoaderComponent } from './shared/components/loader/loader.component';
 import { LoginpageComponent } from './pages/loginpage/loginpage.component';
 import { SidebarComponent } from './shared/components/sidebar/sidebar.component';
-import { TermendComponent } from './features/r-d/components/termend/termend.component';
+import { TermendComponent } from './features/termend/termend.component';
 import { UsersComponent } from './pages/landingPage/users.component';
-import { DashboardComponent } from './features/r-d/components/dashboard/dashboard.component';
+import { DashboardComponent } from './features/dashboard/dashboard.component';
 import { AuthGuardService } from './shared/services/auth-guard.service';
 import { CanDeactivateGuard } from './shared/services/can-deactivate-guard.service';
+import { MarksheetComponent } from './features/marksheet/marksheet.component';
 
 const routes: Routes = [
   { path: '', component: UsersComponent },
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'internalData',
         component: InternalComponent,
+      },
+      {
+        path: 'result/marksheet',
+        component: MarksheetComponent,
       },
     ],
     canActivate: [AuthGuardService],

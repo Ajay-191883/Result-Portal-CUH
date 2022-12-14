@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HelperService } from 'src/app/shared/services/helper.service';
+import { HelperService } from '../../shared/services/helper.service';
 
 @Component({
-  selector: 'app-dataupload',
-  templateUrl: './dataupload.component.html',
-  styleUrls: ['./dataupload.component.css'],
+  selector: 'app-internal',
+  templateUrl: './internal.component.html',
+  styleUrls: ['./internal.component.css'],
 })
-export class DatauploadComponent implements OnInit {
+export class InternalComponent implements OnInit {
   userRole: string = '';
   constructor(
     private helperService: HelperService,

@@ -12,12 +12,11 @@ export class UsersComponent implements OnInit {
   constructor(private router: Router, private authService: AuthService) {}
 
   ngOnInit(): void {
+    console.log(this.authService.authenticatedUser() as AuthUser);
     if (this.authService.authenticatedUser()) {
       this.router.navigate([
         'features',
-        (
-          this.authService.authenticatedUser() as AuthUser
-        ).userRole.toLowerCase(),
+        (this.authService.authenticatedUser() as AuthUser).userRole,
         'dashboard',
       ]);
     }
@@ -25,7 +24,7 @@ export class UsersComponent implements OnInit {
 
   studentLogin() {
     let user: object = {
-      role: 'student',
+      userRole: 'student',
     };
     localStorage.setItem('user', JSON.stringify(user));
     this.router.navigate(['features', 'student', 'dashboard']);

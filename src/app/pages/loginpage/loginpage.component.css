@@ -103,3 +103,10 @@ button[type="submit"]:hover {
   color: red;
   font-size: 0.8rem;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: #fff !important;
+}

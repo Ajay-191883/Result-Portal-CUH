@@ -1,0 +1,76 @@
+<h2>Get Your Result</h2>
+<form
+  *ngIf="!availableResults.length"
+  [formGroup]="resultDetailsForm"
+  class="result-form"
+>
+  <div class="student-details-form">
+    <ul>
+      <li>
+        <label for="name">Name</label>
+        <input formControlName="name" type="text" name="name" maxlength="100" />
+        <span>Enter your full name here</span>
+      </li>
+      <li>
+        <label for="rollno">Roll Number</label>
+        <input
+          formControlName="rollno"
+          type="text"
+          name="rollno"
+          maxlength="100"
+        />
+        <span>Enter a valid Roll number</span>
+      </li>
+      <li>
+        <label for="programme">Programme</label>
+        <input
+          formControlName="programme"
+          type="text"
+          name="programme"
+          maxlength="100"
+        />
+        <span>Enter your Programme like, B.Tech, etc</span>
+      </li>
+      <li>
+        <label for="department">Department</label>
+        <input
+          formControlName="department"
+          type="text"
+          name="department"
+          maxlength="100"
+        />
+        <span>Enter your department</span>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        <label for="session">Session</label>
+        <input
+          formControlName="session"
+          type="text"
+          name="session"
+          maxlength="100"
+        />
+        <span>Enter your session like 2019-20</span>
+      </li>
+      <li id="submit-button">
+        <button class="btn btn-info" (click)="fetchResultsInfo()">
+          Get Result
+        </button>
+      </li>
+    </ul>
+  </div>
+</form>
+
+<div *ngIf="availableResults.length" class="result-list-container">
+  <ul>
+    <li *ngFor="let result of availableResults" (click)="getMarksheet()">
+      {{ result }}
+    </li>
+  </ul>
+
+  <div class="back">
+    <button class="btn btn-info" (click)="goBack()">Back</button>
+  </div>
+</div>
+

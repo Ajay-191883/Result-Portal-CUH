@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HelperService } from '../../../../shared/services/helper.service';
+import { HelperService } from '../../shared/services/helper.service';
 
 @Component({
-  selector: 'app-internal',
-  templateUrl: './internal.component.html',
-  styleUrls: ['./internal.component.css'],
+  selector: 'app-termend',
+  templateUrl: './termend.component.html',
+  styleUrls: ['./termend.component.css'],
 })
-export class InternalComponent implements OnInit {
+export class TermendComponent implements OnInit {
   userRole: string = '';
   constructor(
     private helperService: HelperService,
@@ -22,5 +22,6 @@ export class InternalComponent implements OnInit {
     setTimeout(() => {
       this.helperService.hideLoader();
     }, 1500);
+    this.helperService.hideLoader();
   }
 }

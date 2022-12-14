@@ -3,7 +3,7 @@
 <div class="main_content">
   <app-navbar></app-navbar>
 
-  <div class="box_container">
+  <div *ngIf="!(userRole == 'student')" class="box_container">
     <div class="box_3">
       <h2>Internal Marks</h2>
       <app-data-table></app-data-table>
@@ -24,14 +24,26 @@
         <h2>History</h2>
         <marquee direction="up">
           <ol>
-            <li>Marks of CSE 2nd Year Updated.</li>
-            <li>B.Tech EE 3rd year marks list under process.</li>
-            <li>Internal Awards of B.Ed 1st year uploaded.</li>
-            <li>B.Tech EE 3rd year marks list under process.</li>
-            <li>Internal Awards of B.Ed 1st year uploaded.</li>
+            <li *ngFor="let update of latestUpdates">{{ update }}</li>
           </ol></marquee
         >
       </div>
+    </div>
+  </div>
+
+  <div *ngIf="userRole == 'student'" class="student-dash-container">
+    <div class="recent-updates">
+      <h2>Latest Results Updates</h2>
+      <div class="updates-box">
+        <marquee direction="left">
+          <span *ngFor="let update of latestUpdates"
+            >{{ update }}
+          </span></marquee
+        >
+      </div>
+    </div>
+    <div class="check-result">
+      <app-result></app-result>
     </div>
   </div>
 </div>

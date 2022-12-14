@@ -25,7 +25,7 @@
       <h3>Data Upload</h3>
     </a>
     <a
-      *ngIf="!(userRole == 'student')"
+      *ngIf="!(userRole == 'student' || userRole == 'hod')"
       routerLink="/features/{{ userRole }}/endTermData"
     >
       <i class="fa fa-retweet" aria-hidden="true"></i>

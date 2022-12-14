@@ -18,3 +18,10 @@ tr.mat-footer-row {
   font-size: 16px !important;
   color: #091322 !important;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 360000s;
+}

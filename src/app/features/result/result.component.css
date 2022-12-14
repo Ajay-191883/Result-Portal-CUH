@@ -1,0 +1,144 @@
+h2 {
+  margin-top: 30px;
+}
+.result-form {
+  max-width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  border-radius: 2px;
+  padding: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+.result-form h1 {
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0px 0px 20px 0px;
+  color: #5c5c5c;
+  font-size: x-large;
+}
+.result-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.result-form li {
+  display: block;
+  padding: 9px;
+  border: 1px solid #dddddd;
+  margin-bottom: 30px;
+  border-radius: 3px;
+}
+.result-form li#submit-button {
+  border: none;
+  margin-bottom: 0px;
+  text-align: center;
+}
+.result-form li > label {
+  display: block;
+  float: left;
+  margin-top: -22px;
+  background: #ffffff;
+  height: 14px;
+  padding: 2px 5px 2px 5px;
+  color: #14224c;
+  font-size: 14px;
+  /* overflow: hidden; */
+  font-family: Arial, Helvetica, sans-serif;
+}
+.result-form input,
+.result-form textarea,
+.result-form select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 100%;
+  display: block;
+  outline: none;
+  border: none;
+  height: 25px;
+  line-height: 25px;
+  font-size: 16px;
+  padding: 0;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.result-form li > span {
+  background: #f3f3f3;
+  display: block;
+  padding: 3px;
+  margin: 0 -9px -9px -9px;
+  text-align: center;
+  color: #14224c;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
+.result-form textarea {
+  resize: none;
+}
+.result-form input[type="submit"],
+.result-form input[type="button"] {
+  background: #14224c;
+  border: none;
+  padding: 10px 20px 10px 20px;
+  border-bottom: 3px solid #121f434b;
+  border-radius: 3px;
+  color: #f4c7cc;
+}
+.result-form input[type="submit"]:hover,
+.result-form input[type="button"]:hover {
+  background: #14224c;
+  color: #fff;
+}
+
+.student-details-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.student-details-form ul {
+  width: 45%;
+}
+
+.result-list-container {
+  width: 80%;
+  padding: 2% 0;
+}
+
+.result-list-container .back {
+  margin-top: 20px;
+}
+
+.result-list-container .back button,
+#submit-button button {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 15px;
+  background-color: #091322;
+  padding: 10px;
+  border-color: #091322;
+}
+button:hover {
+  background: none !important;
+  box-shadow: none !important;
+  color: #14224c !important;
+}
+
+.result-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.result-list-container ul li {
+  border: 1px solid #ddd;
+  margin-top: -1px;
+  background-color: #f6f6f6;
+  padding: 12px;
+}
+
+.result-list-container ul li:hover {
+  color: white;
+  background-color: #091322;
+  cursor: pointer;
+}

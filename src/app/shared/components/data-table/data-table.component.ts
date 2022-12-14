@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, ViewChild } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { AfterViewInit, Component, Inject, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -58,7 +59,7 @@ export class DataTableComponent implements AfterViewInit {
   @ViewChild(MatPaginator) paginator: MatPaginator | any;
   @ViewChild(MatSort) sort: MatSort | any;
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) private document: Document) {
     // Create 100 users
     const users = Array.from({ length: 100 }, (_, k) => createNewUser(k + 1));
 
@@ -69,6 +70,17 @@ export class DataTableComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
+
+    this.document.querySelectorAll('.mat-column-actions').forEach((actions) => {
+      if (
+        actions.nextElementSibling?.innerHTML == ' Approved ' ||
+        actions.nextElementSibling?.innerHTML == ' Declined '
+      ) {
+        (actions as HTMLElement).querySelectorAll('i').forEach((i) => {
+          i.style.display = 'none';
+        });
+      }
+    });
   }
 
   applyFilter(event: Event) {

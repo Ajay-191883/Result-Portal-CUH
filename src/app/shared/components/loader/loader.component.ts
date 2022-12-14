@@ -22,6 +22,8 @@ export class LoaderComponent implements AfterViewInit {
     this.helperService.isLoading.subscribe((res) => {
       if (!res) {
         this.loadingDiv.nativeElement.style.display = 'none';
+      } else {
+        this.loadingDiv.nativeElement.style.display = '';
       }
     });
   }

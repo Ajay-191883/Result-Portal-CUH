@@ -109,3 +109,14 @@ li {
 :host ::ng-deep mat-paginator {
   display: none !important;
 }
+
+.recent-updates marquee span {
+  margin-right: 10%;
+}
+
+.updates-box {
+  width: 98%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-bottom: 2px solid lightgray;
+}

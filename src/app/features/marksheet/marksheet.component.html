@@ -1,0 +1,101 @@
+<app-loader></app-loader>
+<app-sidebar userRole="student"></app-sidebar>
+
+<div class="main_content">
+  <app-navbar></app-navbar>
+
+  <div class="container">
+    <!-- Main Content -->
+    <div id="content">
+      <table>
+        <tr>
+          <th id="t">Roll Number</th>
+          <td>211704018</td>
+        </tr>
+        <tr>
+          <th id="t">Name</th>
+          <td>Test Name</td>
+        </tr>
+        <tr>
+          <th id="t">Date Of Birth</th>
+          <td>29/01/2000</td>
+        </tr>
+      </table>
+
+      <table>
+        <tr>
+          <th>Subject Code</th>
+          <br />
+          <th>IS</th>
+          <th>PCC</th>
+          <th>Total</th>
+          <th>Result</th>
+        </tr>
+
+        <tr>
+          <td>ENV4B</td>
+          <br />
+          <td>064</td>
+          <td>025</td>
+          <td>089</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td id="m">SAZ41</td>
+          <br />
+          <td id="m">060</td>
+          <td id="m">040</td>
+          <td id="m">100</td>
+          <td id="m">P</td>
+        </tr>
+        <tr>
+          <td>SAZ4A</td>
+          <br />
+          <td>051</td>
+          <td>025</td>
+          <td>076</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td id="m">SAZ4B</td>
+          <br />
+          <td id="m">045</td>
+          <td id="m">025</td>
+          <td id="m">070</td>
+          <td id="m">P</td>
+        </tr>
+        <tr>
+          <td>SAZ4C</td>
+          <br />
+          <td>039</td>
+          <td>024</td>
+          <td>063</td>
+          <td>P</td>
+        </tr>
+        <tr>
+          <td id="m">SAZ4A</td>
+          <br />
+          <td id="m">040</td>
+          <td id="m">023</td>
+          <td id="m">063</td>
+          <td id="m">P</td>
+        </tr>
+        <tr>
+          <td>TSSEE</td>
+          <br />
+          <td>030</td>
+          <td>030</td>
+          <td>060</td>
+          <td>P</td>
+        </tr>
+      </table>
+      <p class="note">
+        <b> AAA-Absent | P-PASS | F-FAIL | RA - Re-Appear </b>
+      </p>
+    </div>
+
+    <div class="print">
+      <button class="btn btn-info" (click)="saveDiv('content')">Print</button>
+    </div>
+  </div>
+</div>

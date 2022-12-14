@@ -1,0 +1,43 @@
+<app-loader></app-loader>
+<app-sidebar [userRole]="userRole"></app-sidebar>
+<div class="main_content">
+  <app-navbar></app-navbar>
+  <div class="upload-type">
+    <h4>Select Upload Type</h4>
+    <mat-form-field id="doc-type" appearance="fill">
+      <mat-label>Document </mat-label>
+      <mat-select [formControl]="submitDocControl">
+        <mat-option>-- None --</mat-option>
+        <mat-optgroup
+          *ngFor="let group of submitDocGroups"
+          [label]="group.name"
+          [disabled]="group.disabled"
+        >
+          <mat-option
+            *ngFor="let docType of group.docType"
+            [value]="docType.value"
+          >
+            {{ docType.viewValue }}
+          </mat-option>
+        </mat-optgroup>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="data">
+    <div class="main_upload">
+      <i
+        class="fa fa-upload"
+        aria-hidden="true"
+        (click)="file_input.click()"
+      ></i>
+      <p>Upload files from here</p>
+
+      <input #file_input type="file" id="file_input" />
+    </div>
+
+    <div class="upload">
+      <button class="btn btn-info" [disabled]="validDocument()">Upload</button>
+      <button class="btn btn-info">Cancel</button>
+    </div>
+  </div>
+</div>

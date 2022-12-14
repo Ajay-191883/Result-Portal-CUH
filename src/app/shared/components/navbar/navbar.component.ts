@@ -21,9 +21,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.authService.authenticatedUser()) {
-      this.userFirstName = (
-        this.authService.authenticatedUser() as AuthUser
-      ).first_name;
+      this.userFirstName =
+        (this.authService.authenticatedUser() as AuthUser).first_name ||
+        'Student';
     }
   }
 }

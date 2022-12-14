@@ -17,15 +17,15 @@ h2 {
 .main_upload {
   border: 2px solid #d0d7de;
   border-radius: 20px;
-  height: 60vh;
+  height: 40vh;
   width: 70%;
-  margin-top: 50px;
   text-align: center;
 }
 
 .fa-upload {
-  margin-top: 150px;
+  margin-top: 15vh;
   font-size: 50px;
+  cursor: pointer;
 }
 p {
   font-weight: 500;
@@ -44,22 +44,30 @@ label {
 label:hover {
   text-decoration: underline;
 }
+
 .upload {
-  margin-top: 30px;
-  font-size: large;
-  width: 150px;
-  box-shadow: none;
-  border-radius: 5px;
-  background-color: #2da44e;
-  color: white;
+  text-align: center;
+  margin-right: 25%;
 }
-.cancel {
-  margin-left: 30px;
-  margin-top: 30px;
-  font-size: large;
-  width: 150px;
-  box-shadow: none;
-  border-radius: 5px;
-  background-color: white;
-  color: red;
+
+.upload-type {
+  padding: 3% 5%;
+}
+
+#doc-type {
+  width: 90%;
+}
+
+.upload button {
+  margin: 20px 30px 0 0;
+  color: white;
+  font-size: 15px;
+  background-color: #091322;
+  padding: 10px;
+  border-color: #091322;
+}
+button:hover {
+  background: none !important;
+  box-shadow: none !important;
+  color: #14224c !important;
 }

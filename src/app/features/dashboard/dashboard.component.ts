@@ -12,6 +12,13 @@ import { HelperService } from 'src/app/shared/services/helper.service';
 export class DashboardComponent implements OnInit {
   userRole: string = '';
   userFirstName = 'User';
+  latestUpdates: string[] = [
+    'Marks of CSE 2nd Year Updated.',
+    'B.Tech EE 3rd year marks list under process.',
+    'Internal Awards of B.Ed 1st year uploaded.',
+    'B.Tech EE 3rd year marks list under process.',
+    'Internal Awards of B.Ed 1st year uploaded.',
+  ];
   constructor(
     private helperService: HelperService,
     private route: ActivatedRoute,
@@ -22,8 +29,6 @@ export class DashboardComponent implements OnInit {
     this.route.params.subscribe((p) => {
       this.userRole = p['userRole'];
     });
-
-    
 
     setTimeout(() => {
       this.helperService.hideLoader();
